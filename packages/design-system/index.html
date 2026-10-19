@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+  Preview entry for the design system. Renders a living style guide that
+  showcases the tokens (tokens.json) and the current component library.
+  Fonts are loaded as non-blocking <link> tags (not CSS @import, which is
+  render-blocking). Trim this font bundle to the families your tokens use.
+-->
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <title>Cognirise Atelier</title>
+    <meta name="description" content="Cognirise Atelier — design system preview built on Replit." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Brand typography: Comfortaa (headings/display/wordmark, 400+700) +
+         Inter (body/UI, 400/600/800). -->
+    <link rel="stylesheet" media="print" onload="this.media='all'"
+          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;600;800&display=swap">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;600;800&display=swap"></noscript>
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="root" style="height: 100%"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

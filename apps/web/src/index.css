@@ -1,0 +1,36 @@
+/* Pulse typography, self-hosted: Comfortaa for display, Inter for everything else. */
+@import "@fontsource/comfortaa/latin-400.css";
+@import "@fontsource/comfortaa/latin-700.css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-800.css";
+
+@import "@cognirise/atelier/styles.css";
+
+/* Arabic runs (customer messages) never use letter-spacing, caps or monospace. */
+.ar, [dir="rtl"] { letter-spacing: 0 !important; text-transform: none; }
+.ar .font-mono, [dir="rtl"] .font-mono, .ltr { direction: ltr; unicode-bidi: isolate; }
+
+.scroll-thin { scrollbar-width: thin; }
+.table-clean { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table-clean th { text-align: start; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--color-muted-foreground); padding: 8px 10px; border-bottom: 1px solid color-mix(in oklab, var(--color-border) 80%, transparent); white-space: nowrap; }
+.table-clean td { padding: 9px 10px; border-bottom: 1px solid color-mix(in oklab, var(--color-border) 45%, transparent); vertical-align: top; }
+.table-clean tr:last-child td { border-bottom: 0; }
+.table-clean tbody tr.clickable { cursor: pointer; }
+.table-clean tbody tr.clickable:hover td { background: color-mix(in oklab, var(--color-primary) 6%, transparent); }
+.field { display: grid; gap: 6px; }
+.field > span { font-size: 12px; color: var(--color-muted-foreground); }
+.input { height: 38px; border-radius: 10px; border: 1px solid var(--color-border); background: color-mix(in oklab, var(--color-background) 55%, transparent); padding: 0 12px; font-size: 14px; color: var(--color-foreground); }
+.input:focus { outline: none; border-color: var(--color-primary); }
+textarea.input { height: auto; padding: 8px 12px; min-height: 72px; }
+
+@keyframes dhow-flash { 0% { box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-accent) 85%, transparent), 0 0 0 8px color-mix(in oklab, var(--color-accent) 25%, transparent); } 100% { box-shadow: 0 0 0 0 transparent; } }
+.flash { animation: dhow-flash 3s ease-out 1; border-radius: 10px; }
+.flash-row td:first-child { box-shadow: inset 3px 0 0 var(--color-accent); }
+.flash-row td { background: color-mix(in oklab, var(--color-accent) 10%, transparent) !important; transition: background 3s ease-out; }
+
+/* The layer-on-top diagram on the Overview. */
+.layer-row { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+.layer-box { border: 1px solid color-mix(in oklab, var(--color-border) 90%, transparent); border-radius: 10px; padding: 8px 10px; font-size: 12px; background: color-mix(in oklab, var(--color-card) 70%, transparent); }
+.layer-box.system { border-style: dashed; color: var(--color-muted-foreground); }

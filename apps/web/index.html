@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhow Telecom · agentic layer (demo)</title>
+    <meta name="description" content="Dhow Telecom is a fictional operator. This is a working example of Cognirise's agentic layer over a telco's systems of record, on synthetic data." />
+    <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+    <script>
+      (function () {
+        try {
+          var m = localStorage.getItem("atelier-theme") || "system";
+          var d = m === "dark" || (m === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", d);
+          document.documentElement.style.colorScheme = d ? "dark" : "light";
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "dhow-telecom",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Dhow Telecom (fictional operator) - a working example of Cognirise's agentic layer over a telco's systems of record: billing disputes, roaming fraud, retention offers, complaints and enterprise activation, governed by the Agent Authority Model. Demo prototype on synthetic data.",
+  "workspaces": ["packages/*", "apps/server", "apps/web"],
+  "scripts": {
+    "start": "npm run start --workspace @dhow/server",
+    "build": "npm run build --workspace @dhow/web",
+    "dev:web": "npm run dev --workspace @dhow/web",
+    "dev:server": "npm run dev --workspace @dhow/server",
+    "seed": "npm run seed --workspace @dhow/server",
+    "check": "npm run check --workspace @dhow/server",
+    "typecheck": "npm run typecheck --workspace @dhow/domain && npm run typecheck --workspace @dhow/server && npm run typecheck --workspace @dhow/web",
+    "tokens": "npm run tokens --workspace @cognirise/atelier",
+    "contrast": "npm run contrast --workspace @cognirise/atelier",
+    "replit": "bash tools/replit-run.sh"
+  },
+  "overrides": { "rollup": "4.63.3", "vite": "7.3.6" },
+  "engines": { "node": ">=20" }
+}
